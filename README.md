@@ -27,7 +27,7 @@ Instead of analyzing raw decimals, I used SQL to engineer business-friendly clin
 • Anomaly Detection: Utilized Window Functions and Subqueries to flag patient outliers whose Length of Stay exceeded 150% of the baseline average for their specific primary diagnosis.
 • Cohort Ranking: Applied NTILE(4) to segment patients into quartiles based on hospital stay duration for comparative readmission analysis.
 
-Key Findings & The "Synthetic Data" Discovery
+Key Findings & The "Synthetic Dat Discovery
 1. Medication Adherence Impact: Segmenting the dataset by adherence risk tiers revealed remarkably flat readmission rates across all groups (ranging only from 73.4% to 75.5%), suggesting adherence was not the primary driver of readmission.
    
 2. The ML-Balancing Artifact: Further analysis grouped patients by Primary_Diagnosis. The query returned perfectly uniform patient cohorts (approx. 3,600 patients each) with near-identical readmission rates (~74%) across completely different diseases (Cardiac, Infection, Diabetes).
